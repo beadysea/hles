@@ -8,6 +8,7 @@ install:
 script:             # build sphinx document
   - cd docsrc
   - make html
+  - touch _build/html/.nojekyll
   - cd -
 deploy:              # deploy to github page
   provider: pages
