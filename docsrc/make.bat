@@ -8,7 +8,7 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
 set SOURCEDIR=../docsrc
-set BUILDDIR=build
+set BUILDDIR=_build
 REM GITHUBDIR is used in a windows command so \ used instead of /
 set GITHUBDIR=..\docs
 
