@@ -1,5 +1,7 @@
 The api class
 =============
 
-.. automodule:: matrixtsl.allcode
+.. module:: matrixtsl
+
+.. automodule:: allcode
    :members:
