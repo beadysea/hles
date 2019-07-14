@@ -10,7 +10,7 @@ install:
 
 jobs:
   include:
-	- stage: deploy documents
+	- stage: "deploy documents"
 		#update documents using sphinx
 	  script:             # build sphinx document
 		- cd docsrc
