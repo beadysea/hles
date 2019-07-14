@@ -8,7 +8,7 @@ deploy              # deploy to github page
 - provider: pages
   skip_cleanup: true
   local_dir: docsrc/build/html
-  github_token: dP5VdlCKaSlj_EJrgctrgQ
+  github_token: $GITHUB_TOKEN
   keep_history: true
   on:
     branch: master
