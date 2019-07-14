@@ -16,7 +16,7 @@ deploy:              # deploy to github page
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   keep-history: true
   on:
-    branch: master
+    branch: gh-pages
 
 #python versions to run tests on
 #python:
