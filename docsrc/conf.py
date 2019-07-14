@@ -51,10 +51,6 @@ exclude_patterns = []
 
 source_suffix = ['.rst', '.md']
 
-source_parsers = {
-    '.md': CommonMarkParser,
-}
-
 def setup(app):
     app.add_config_value('recommonmark_config', {
         'enable_eval_rst': True,
