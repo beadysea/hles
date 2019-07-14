@@ -18,7 +18,7 @@ install:
   - pip install -r docsrc/requirements.txt
 script:             # build sphinx document
   - cd docsrc/
-  - script: sphinx-build -nW -b html -d _build/doctrees . _build/html
+  - sphinx-build -nW -b html -d .. . _build/html
   - cd -
 deploy:              # deploy to github page
   provider: pages
