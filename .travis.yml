@@ -1,0 +1,14 @@
+install:            # Install requirement as "Environment Setup Section"
+- pip install -r sphinx_root/requirements.txt
+script:             # build sphinx document
+- cd sphinx_root/
+- make html
+- cd -
+deploy              # deploy to github page
+- provider: pages
+  skip_cleanup: true
+  local_dir: sphinx_root/_build/html
+  github_token: dP5VdlCKaSlj_EJrgctrgQ
+  keep_history: true
+  on:
+    branch: master
