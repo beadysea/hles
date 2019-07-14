@@ -33,7 +33,7 @@ goto end
 
 :gthub
 %SPHINXBUILD% -M "html" %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
-xcopy %BUILDDIR%\html %GITHUBDIR%
+xcopy %BUILDDIR%\html %GITHUBDIR% /S /I
 
 goto end
 
