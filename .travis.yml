@@ -18,12 +18,12 @@ install:
   - pip install -r docsrc/requirements.txt
 script:             # build sphinx document
   - cd docsrc/
-  - sphinx-build -nW -b html -d .. . _build/html
+  - make html
   - cd -
 deploy:              # deploy to github page
   provider: pages
   skip_cleanup: true
-  local_dir: docsrc/_build/html
+  local_dir: docsrc/build/html
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   keep-history: true
   on:
