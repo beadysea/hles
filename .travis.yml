@@ -11,8 +11,6 @@ install:
 
 jobs:
   include:
-    - stage: unit testing
-	  script: skip
 	- stage: deploy documents
 		#update documents using sphinx
 	  script:             # build sphinx document
