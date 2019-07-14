@@ -8,3 +8,5 @@ The api class
 
 .. autoclass:: API
    :members:
+
+   .. automethod:: com_open
