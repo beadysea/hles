@@ -5,15 +5,16 @@ python:
 	"2.7"
   - "3.7"
 
+install:
+  - pip install -r requirements.txt
+  - pip install -r docsrc/requirements.txt
+
 jobs:
   include:
     - stage: unit testing
 	  script: skip
 	- stage: deploy documents
 		#update documents using sphinx
-	  install:
-	    - pip install -r requirements.txt
-		- pip install -r docsrc/requirements.txt
 	  script:             # build sphinx document
 		- cd docsrc
 		- make html
