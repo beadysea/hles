@@ -19,7 +19,7 @@ jobs:
 		- make html
 		- touch _build/html/.nojekyll
 		- cd -
-		deploy:              # deploy to github page
+	  deploy:              # deploy to github page
 		provider: pages
 		skip_cleanup: true
 		local_dir: docsrc/_build/html
