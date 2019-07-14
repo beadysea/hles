@@ -1,23 +1,12 @@
 dist: xenial   # required for Python >= 3.7
 language: python
-#python versions to run tests on
 python:
-  - "2.7"
-  - "3.6"
   - "3.7"
-#command to install dependencies
-install:
-  - pip install -r requirements.txt
-
-# command to run tests
-script:
-  - pytest
-  
 #update documents using sphinx
 install:
   - pip install -r docsrc/requirements.txt
 script:             # build sphinx document
-  - cd docsrc/
+  - cd docsrc
   - make html
   - cd -
 deploy:              # deploy to github page
@@ -28,3 +17,15 @@ deploy:              # deploy to github page
   keep-history: true
   on:
     branch: master
+
+#python versions to run tests on
+python:
+  - "2.7"
+  - "3.6"
+#command to install dependencies
+install:
+  - pip install -r requirements.txt
+
+# command to run tests
+script:
+  - pytest
