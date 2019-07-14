@@ -2,7 +2,7 @@ The api class
 =============
 
 
-.. automodule:: matrixtsl
+.. automodule:: matrixtsl.allcode
 
 .. module:: matrixtsl.allcode
 
