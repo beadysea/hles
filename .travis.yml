@@ -14,18 +14,4 @@ deploy:              # deploy to github page
   skip_cleanup: true
   local_dir: docsrc/_build/html
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  keep-history: true
-  on:
-    branch: gh-pages
-
-#python versions to run tests on
-#python:
-#  - "2.7"
-#  - "3.6"
-#command to install dependencies
-#install:
-#  - pip install -r requirements.txt
-
-# command to run tests
-#script:
-#  - pytest
+  keep-history: false
