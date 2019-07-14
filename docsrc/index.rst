@@ -10,7 +10,6 @@ Course Notes
 ############
 
 .. toctree::
-   :glob:
    :maxdepth: 2
 
    notes/intro
