@@ -24,18 +24,3 @@ install:
 # command to run tests
 script:
   - pytest
-
-install:            # Install requirement as for sphinx as per "Environment Setup Section" in conf
-- pip install -r docsrc/requirements.txt
-script:             # build sphinx document
-- cd docsrc/
-- make html
-- cd -
-deploy              # deploy to github page
-- provider: pages
-  skip_cleanup: true
-  local_dir: docsrc/build/html
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  on:
-    branch: master
