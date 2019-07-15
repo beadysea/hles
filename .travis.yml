@@ -1,5 +1,6 @@
 language: python
 dist: xenial   # required for Python >= 3.7
+sudo: false
 
 python:
   - "3.7"
@@ -9,9 +10,12 @@ install:
   - pip install -r docsrc/requirements.txt
 jobs:
   include:
-    - stage: unittest
-	  script: echo "unittest"
-	- stage: deploy docs
+    - &test
+      stage: unittest
+	  script: 
+	  - echo "unittest"
+	- &deploy
+	  stage: deploy docs
 	  script:
 	  - cd docsrc
 	  - make html
