@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The api class &mdash; High level engineering software 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Introduction" href="../notes/intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> High level engineering software
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../notes/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes/intro.html#basic-machine-architecture">Basic machine architecture</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The api class</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">High level engineering software</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>The api class</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/intro.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matrixtsl.allcode">
+<span id="the-api-class"></span><h1>The api class<a class="headerlink" href="#module-matrixtsl.allcode" title="Permalink to this headline">¶</a></h1>
+<p>Formula allCode API.</p>
+<p>This module consists of a an API class providing developers access to all methods available
+for controlling a formula allcode car to the application programmer.</p>
+<p>Example use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">matrixtsl</span> <span class="k">import</span> <span class="n">allcode</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">car</span> <span class="o">=</span> <span class="n">allcode</span><span class="o">.</span><span class="n">device</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="class">
+<dt id="matrixtsl.allcode.device">
+<em class="property">class </em><code class="sig-prename descclassname">matrixtsl.allcode.</code><code class="sig-name descname">device</code><a class="headerlink" href="#matrixtsl.allcode.device" title="Permalink to this definition">¶</a></dt>
+<dd><p>An allcode device.</p>
+<dl class="method">
+<dt id="matrixtsl.allcode.device.api_version">
+<code class="sig-name descname">api_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.api_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the API version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The API version.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.backwards">
+<code class="sig-name descname">backwards</code><span class="sig-paren">(</span><em class="sig-param">distance</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.backwards" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the robot moving backwards</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>distance</strong> (<em>int</em>) – distance to move (0 to 1000) in mm</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.com_close">
+<code class="sig-name descname">com_close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.com_close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close a serial communication link.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.com_open">
+<code class="sig-name descname">com_open</code><span class="sig-paren">(</span><em class="sig-param">port</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.com_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a serial communication link.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>port</strong> – The COM port to open</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.forwards">
+<code class="sig-name descname">forwards</code><span class="sig-paren">(</span><em class="sig-param">distance</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.forwards" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the robot moving forward</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>distance</strong> (<em>int</em>) – distance to move (0 to 1000) in mm</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.lcd_backlight">
+<code class="sig-name descname">lcd_backlight</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.lcd_backlight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control the backlight of the display</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – The brightness of the backlight (0 to 100)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.lcd_clear">
+<code class="sig-name descname">lcd_clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.lcd_clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the LCD</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.lcd_line">
+<code class="sig-name descname">lcd_line</code><span class="sig-paren">(</span><em class="sig-param">x1</em>, <em class="sig-param">y1</em>, <em class="sig-param">x2</em>, <em class="sig-param">y2</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.lcd_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a line on the LCD between points A and B</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x1</strong> – The x-coordinate of point A (0 to 127)</p></li>
+<li><p><strong>y1</strong> – The y-coordinate of point A (0 to 31)</p></li>
+<li><p><strong>x2</strong> – The x-coordinate of point B (0 to 127)</p></li>
+<li><p><strong>y2</strong> – The y-coordinate of point B (0 to 31)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.lcd_number">
+<code class="sig-name descname">lcd_number</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.lcd_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a number on the LCD</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The x-coordinate (0 to 127)</p></li>
+<li><p><strong>y</strong> – The y-coordinate (0 to 31)</p></li>
+<li><p><strong>value</strong> – The number to display (-32768 to 32767)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.lcd_options">
+<code class="sig-name descname">lcd_options</code><span class="sig-paren">(</span><em class="sig-param">foreground</em>, <em class="sig-param">background</em>, <em class="sig-param">transparent</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.lcd_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the options for the display</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>foreground</strong> – The foreground colour, 0 (white) or 1 (black)</p></li>
+<li><p><strong>background</strong> – The background colour, 0 (white) or 1 (black)</p></li>
+<li><p><strong>transparent</strong> – The transparency, 0 (false) or 1 (true)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.lcd_pixel">
+<code class="sig-name descname">lcd_pixel</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.lcd_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a pixel on the LCD</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The x-coordinate (0 to 127)</p></li>
+<li><p><strong>y</strong> – The y-coordinate (0 to 31)</p></li>
+<li><p><strong>state</strong> – 0 (off) or 1 (on)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.lcd_print">
+<code class="sig-name descname">lcd_print</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.lcd_print" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display text on the LCD</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The x-coordinate (0 to 127)</p></li>
+<li><p><strong>y</strong> – The y-coordinate (0 to 31)</p></li>
+<li><p><strong>text</strong> – The text to display</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.lcd_rect">
+<code class="sig-name descname">lcd_rect</code><span class="sig-paren">(</span><em class="sig-param">x1</em>, <em class="sig-param">y1</em>, <em class="sig-param">x2</em>, <em class="sig-param">y2</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.lcd_rect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a rectangle on the LCD between points A and B</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x1</strong> – The x-coordinate of point A (0 to 127)</p></li>
+<li><p><strong>y1</strong> – The y-coordinate of point A (0 to 31)</p></li>
+<li><p><strong>x2</strong> – The x-coordinate of point B (0 to 127)</p></li>
+<li><p><strong>y2</strong> – The y-coordinate of point B (0 to 31)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.led_off">
+<code class="sig-name descname">led_off</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.led_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn an LED off</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The LED to turn off (0 to 7)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.led_on">
+<code class="sig-name descname">led_on</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.led_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn an LED on</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The LED to turn on (0 to 7)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.led_write">
+<code class="sig-name descname">led_write</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.led_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the LEDs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>int</em>) – Value to set the LEDS (0 to 255)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.left">
+<code class="sig-name descname">left</code><span class="sig-paren">(</span><em class="sig-param">angle</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the robot to turn left</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>int</em>) – angle to rotate (0 to 360) in degrees</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.play_note">
+<code class="sig-name descname">play_note</code><span class="sig-paren">(</span><em class="sig-param">note</em>, <em class="sig-param">length</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.play_note" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play a note on the speaker</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>note</strong> (<em>int</em>) – The frequency of the note (1 to 10000) in Hz</p></li>
+<li><p><strong>length</strong> (<em>int</em>) – The duration of the note (1 to 10000) in ms</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.read_axis">
+<code class="sig-name descname">read_axis</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.read_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read an axis value of the accelerometer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – Axis to query (0 to 3)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Value of accelerometer axis (-32768 to 32767)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.read_ir">
+<code class="sig-name descname">read_ir</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.read_ir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read an IR sensors value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – IR sensor to query (0 to 7)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Value of IR sensor (0 to 4095)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.read_light">
+<code class="sig-name descname">read_light</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.read_light" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the light sensor value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Value of light sensor (0 to 4095)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.read_line">
+<code class="sig-name descname">read_line</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.read_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a line sensor value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – Line sensor to query (0 to 1)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Value of Line sensor (0 to 4095)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.read_mic">
+<code class="sig-name descname">read_mic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.read_mic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the microphone sensor value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Value of microphone sensor (0 to 4095)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.read_switch">
+<code class="sig-name descname">read_switch</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.read_switch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a switch status</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – 0 (left) or 1 (right)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>0 (false) or 1 (true)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.right">
+<code class="sig-name descname">right</code><span class="sig-paren">(</span><em class="sig-param">angle</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the robot to turn right</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>int</em>) – angle to rotate (0 to 360) in degrees</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.servo_auto_move">
+<code class="sig-name descname">servo_auto_move</code><span class="sig-paren">(</span><em class="sig-param">index</em>, <em class="sig-param">position</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.servo_auto_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Auto-move a servo to a position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> – The servo to control (0 to 3)</p></li>
+<li><p><strong>position</strong> – The position of the servo (0 to 255)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.servo_disable">
+<code class="sig-name descname">servo_disable</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.servo_disable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable a servo motor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – The servo to control (0 to 3)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.servo_enable">
+<code class="sig-name descname">servo_enable</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.servo_enable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable a servo motor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – The servo to control (0 to 3)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.servo_move_speed">
+<code class="sig-name descname">servo_move_speed</code><span class="sig-paren">(</span><em class="sig-param">speed</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.servo_move_speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the auto-move speed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>speed</strong> – The servo speed (1 to 50)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.servo_set_pos">
+<code class="sig-name descname">servo_set_pos</code><span class="sig-paren">(</span><em class="sig-param">index</em>, <em class="sig-param">position</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.servo_set_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move a servo immediately to a position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> – The servo to control (0 to 3)</p></li>
+<li><p><strong>position</strong> – The position of the servo (0 to 255)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="matrixtsl.allcode.device.set_motors">
+<code class="sig-name descname">set_motors</code><span class="sig-paren">(</span><em class="sig-param">left</em>, <em class="sig-param">right</em><span class="sig-paren">)</span><a class="headerlink" href="#matrixtsl.allcode.device.set_motors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the motors speed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> (<em>int</em>) – value of left motor (0 to 100)</p></li>
+<li><p><strong>right</strong> (<em>int</em>) – value of right motor (0 to 100)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../notes/intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Bill Crawford
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
