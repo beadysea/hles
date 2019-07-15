@@ -13,17 +13,17 @@ jobs:
     - &test
       stage: unittest
 	  script: 
-	  - echo "unittest"
-	- &deploy
-	  stage: deploy docs
-	  script:
-	  - cd docsrc
-	  - make html
-	  - touch _build/html/.nojekyll
-	  - cd -
-	  deploy:
-	    provider: pages
-	    skip_cleanup: true
-	    local_dir: docsrc/_build/html
-	    github_token: $GITHUB_TOKEN 
-	    keep-history: false
+	    - echo "unittest"
+#	- &deploy
+#	  stage: deploy docs
+#	  script:
+#	  - cd docsrc
+#	  - make html
+#	  - touch _build/html/.nojekyll
+#	  - cd -
+#	  deploy:
+#	    provider: pages
+#	    skip_cleanup: true
+#	    local_dir: docsrc/_build/html
+#	    github_token: $GITHUB_TOKEN 
+#	    keep-history: false
