@@ -1,13 +1,14 @@
 """Formula allCode API.
 
-This module consists of a an API class providing all avalaible methods for
-controlling a formula allcode car to the application programmer.
+This module consists of a an API class providing developers access to all methods available
+for controlling a formula allcode car to the application programmer.
 
-Example use
+Example use:
+
 ::
     
     >>> from matrixtsl import allcode
-    >>> car = allcode.API()
+    >>> car = allcode.device()
 
 """
 
@@ -25,7 +26,10 @@ if _platform == "win32":
         import winreg as _winreg
 
 
-class API:
+class device:
+    """An allcode device.
+    
+    """
     
     def __init__(self):
         _ser = _serial.Serial()
@@ -33,12 +37,12 @@ class API:
         self._ser.close()
 
     def com_open(self, port):
-        """Open a communication link to the robot
+        """Open a serial communication link.
 
         Args:
             port: The COM port to open
-        """
 
+        """
         if _platform == "linux" or _platform == "linux2":
             # linux
             s = '/dev/rfcomm{0}'.format(port)
@@ -61,7 +65,7 @@ class API:
         return;
 
     def com_close(self):
-        """Close the communication link to the robot.
+        """Close a serial communication link.
 
         """
         self.__ser.close()
@@ -158,7 +162,7 @@ class API:
         """Read a switch status
 
         Args:
-            index: 0 (left) or 1 (right)
+            index (int): 0 (left) or 1 (right)
 
         Returns:
             int: 0 (false) or 1 (true)
@@ -170,7 +174,7 @@ class API:
         return(r);
 
     def read_ir(self, index):
-        """Read the IR value
+        """Read an IR sensors value
 
         Args:
             index (int): IR sensor to query (0 to 7)
@@ -185,10 +189,10 @@ class API:
         return(r);
 
     def read_line(self, index):
-        """Read the line sensor value
+        """Read a line sensor value
 
         Args:
-            index: Line sensor to query (0 to 1)
+            index (int): Line sensor to query (0 to 1)
 
         Returns:
             int: Value of Line sensor (0 to 4095)
@@ -224,10 +228,10 @@ class API:
         return(r);
 
     def read_axis(self, index):
-        """Read the axis value of the accelerometer
+        """Read an axis value of the accelerometer
 
         Args:
-            index: Axis to query (0 to 3)
+            index (int): Axis to query (0 to 3)
 
         Returns:
             int: Value of accelerometer axis (-32768 to 32767)
@@ -244,8 +248,8 @@ class API:
         """Set the motors speed
 
         Args:
-            left: value of left motor (0 to 100)
-            right: value of right motor (0 to 100)
+            left (int): value of left motor (0 to 100)
+            right (int): value of right motor (0 to 100)
         """
         s = 'SetMotors {0} {1}\n'.format(int(left),int(right))
         self.__ser.write(s.encode())
@@ -255,7 +259,7 @@ class API:
         """Set the robot moving forward
 
         Args:
-            distance: distance to move (0 to 1000) in mm
+            distance (int): distance to move (0 to 1000) in mm
         """
         self._flush()
         s = 'Forwards {0}\n'.format(int(distance))
@@ -270,7 +274,7 @@ class API:
         """Set the robot moving backwards
 
         Args:
-            distance: distance to move (0 to 1000) in mm
+            distance (int): distance to move (0 to 1000) in mm
         """
         self._flush()
         s = 'Backwards {0}\n'.format(int(distance))
@@ -285,7 +289,7 @@ class API:
         """Set the robot to turn left
 
         Args:
-            angle: angle to rotate (0 to 360) in degrees
+            angle (int): angle to rotate (0 to 360) in degrees
         """
         self._flush()
         s = 'Left {0}\n'.format(int(angle))
@@ -300,7 +304,7 @@ class API:
         """Set the robot to turn right
 
         Args:
-            angle: angle to rotate (0 to 360) in degrees
+            angle (int): angle to rotate (0 to 360) in degrees
         """
         self._flush()
         s = 'Right {0}\n'.format(int(angle))
@@ -317,7 +321,7 @@ class API:
         """Set the value of the LEDs
 
         Args:
-            value: Value to set the LEDS (0 to 255)
+            value (int): Value to set the LEDS (0 to 255)
         """
         s = 'LEDWrite {0}\n'.format(int(value))
         self.__ser.write(s.encode())
@@ -327,7 +331,7 @@ class API:
         """Turn an LED on
 
         Args:
-            index: The LED to turn on (0 to 7)
+            index (int): The LED to turn on (0 to 7)
         """
         s = 'LEDOn {0}\n'.format(int(index))
         self.__ser.write(s.encode())
@@ -337,7 +341,7 @@ class API:
         """Turn an LED off
 
         Args:
-            index: The LED to turn off (0 to 7)
+            index (int): The LED to turn off (0 to 7)
         """
         s = 'LEDOff {0}\n'.format(int(index))
         self.__ser.write(s.encode())
@@ -347,8 +351,8 @@ class API:
         """Play a note on the speaker
 
         Args:
-            note: The frequency of the note (1 to 10000) in Hz
-            length: The duration of the note (1 to 10000) in ms
+            note (int): The frequency of the note (1 to 10000) in Hz
+            length (int): The duration of the note (1 to 10000) in ms
         """
         s = 'PlayNote {0} {1}\n'.format(int(note),int(length))
         self.__ser.write(s.encode())
