@@ -7,11 +7,13 @@ dist: xenial
 install: 
   - pip install -r requirements.txt
   - pip install -r docsrc/requirements.txt
+
 jobs: 
   include: 
-    - stage: 'unittest' 
+    - stage: unittest 
       script: pytest
-	- stage: 'deploy docs'
+
+	- stage: deployd_docs
       script: 
         - cd docsrc
         - make html
