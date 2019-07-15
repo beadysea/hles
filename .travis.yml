@@ -11,7 +11,7 @@ install:
 jobs:
   include:
     - stage: unittest
-	  script: skip
+	  script: pytest
 #	- &deploy
 #	  stage: deploy docs
 #	  script:
