@@ -2,7 +2,6 @@ language: python
 python: 
   - "3.7"
 
-
 dist: xenial
 install: 
   - pip install -r requirements.txt
@@ -21,5 +20,3 @@ deploy:
   local_dir: docsrc/_build/html
   github_token: $GITHUB_TOKEN
   keep-history: false
-      
-      
