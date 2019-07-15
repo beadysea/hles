@@ -56,3 +56,13 @@ High Byte  Low Byte  High Byte  Low Byte
 =========  ========  =========  ========
 
 32 bit word ( 0 to 4,294,967,295 )
+
+
+So far we have touched on a few important ideas fundamental to how we write software today. 
+First is that computers store information as binary numbers. We can think of a bit as the most 
+primitive type of data. The idea of extensibility will be important as we continue to develop
+our software writing skills. In the above discussion we saw extensibility in action when we 
+extended size of data from bit to byte, then to 16 bit or 2byte Word and 32 bit or quad byte Word.
+
+We've also touched on the idea of abstraction when we assigned the value of 0 to the more abstract
+notion of OFF and the value 1 to the more abstract notion of ON. 
