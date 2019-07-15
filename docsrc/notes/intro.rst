@@ -17,9 +17,8 @@ Well every modern computing device - your phone, laptop, tablet, tv etc works on
 a transistor switch having two possible states - ON or OFF. Let's represent **ON** with the value
 **1** and **OFF** with the value **0** \.
 
-We can now think of this single transistor as a binary device as it has two states, 0 or 1. 
-Furthermore we can think of this state as storing a numerical value, a binary digit. We shorten
-**bi**\nary digi\ **t** to **bit**. So a single transistor can be thought of as device storing 
+We can now think of this single transistor as a device capable of storing a numerical value, 
+a binary digit. We shorten **bi**\nary digi\ **t** to **bit**. So a single transistor can store
 a **bit** of numerical information. A zero (0) or a (1).
 
 Of course if we want to store a lot of information we are going to need more **bits**, 
@@ -27,13 +26,14 @@ billions and trillions of them for today's world, but let's no get ahead of ours
 If we have two bits then we can start with the idea of counting using the same process we use in
 decimal.
 
-=======  =====  =====
-decimal  bit 1  bit 0
-value
-=======  =====  =====
-0        0      0
-1        0      1
-2        1      0
-3        1      1
-=======  =====  =====
+================  =====  =====  ===============================================================
+Column weight ->
+-----------------------------------------------------------------------------------------------
+decimal value     bit 1  bit 0
+================  =====  =====  ===============================================================
+0                 0      0
+1                 0      1      We can't count higher than 1 in binary
+2                 1      0      so we place a 0 in the units column and a 1 in the two's column
+3                 1      1
+=======           =====  =====  ===============================================================
 
