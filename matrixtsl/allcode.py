@@ -58,7 +58,8 @@ class API:
         return;
 
     def com_close(self):
-        """Close the communication link to the robot
+        """Close the communication link to the robot.
+
         """
         self.__ser.close()
         return;
@@ -136,10 +137,10 @@ class API:
 
 
     def api_version(self):
-        """Retrieves the API version from the robot
+        """Retrieves the API version.
 
         Returns:
-            int: The API version in the robot
+            int: The API version.
         """
         self._flush()
         s = 'GetAPIVersion\n'
@@ -151,7 +152,7 @@ class API:
 
 
     def read_switch(self, index):
-        """Read the switch value
+        """Read a switch status
 
         Args:
             index: 0 (left) or 1 (right)
@@ -169,7 +170,7 @@ class API:
         """Read the IR value
 
         Args:
-            index: IR sensor to query (0 to 7)
+            index (int): IR sensor to query (0 to 7)
 
         Returns:
             int: Value of IR sensor (0 to 4095)
