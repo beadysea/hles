@@ -5,18 +5,18 @@ sudo: false
 
 dist: xenial
 install: 
-  - "pip install -r requirements.txt"
-  - "pip install -r docsrc/requirements.txt"
+  - pip install -r requirements.txt
+  - pip install -r docsrc/requirements.txt
 jobs: 
   include: 
-    - stage: unittest 
+    - stage: 'unittest' 
       script: pytest
-	- stage: "deploy docs"
+	- stage: 'deploy docs'
       script: 
-        - "cd docsrc"
-        - "make html"
-        - "touch _build/html/.nojekyll"
-        - "cd -"
+        - cd docsrc
+        - make html
+        - touch _build/html/.nojekyll
+        - cd -
       deploy: 
         github_token: $GITHUB_TOKEN
         keep-history: false
