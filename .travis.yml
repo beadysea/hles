@@ -11,7 +11,7 @@ jobs:
   include:
     - stage: unittest
 	   script: echo "unittest"
-	- stage: deploy docsrc
+	- stage: deploy docs
 	   script:
 	   - cd docsrc
 	   - make html
