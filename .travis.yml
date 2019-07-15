@@ -10,10 +10,8 @@ install:
   - pip install -r docsrc/requirements.txt
 jobs:
   include:
-    - &test
-      stage: unittest
-	  script: 
-	    - echo "unittest"
+    - stage: unittest
+	  script: skip
 #	- &deploy
 #	  stage: deploy docs
 #	  script:
