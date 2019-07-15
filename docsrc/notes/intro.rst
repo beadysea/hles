@@ -28,9 +28,9 @@ decimal.
 
 ================  =====  =====
 Column weight ->  2's    1's  
-----------------  
+----------------  =====  =====
 decimal value     bit 1  bit 0
-================
+================  =====  =====
 0                 0      0    
 1                 0      1    
 2                 1      0    
@@ -44,13 +44,15 @@ pointless however start bolting bytes together then you can represent any number
 enough bytes of memory to store it.
 
 +-----------+----------+
-| High Byte | Low Byte |  A 16 bit word capable of storing numbers 0 to 65,535 
+| High Byte | Low Byte |   
 +-----------+----------+
+
+A 16 bit word capable of storing numbers 0 to 65,535
 
 =========  ========  =========  ========
 High Word            Low Word
--------------------  -------------------  32 bit word ( 0 to 4,294,967,295 )
+-------------------  -------------------
 High Byte  Low Byte  High Byte  Low Byte
 =========  ========  =========  ========
 
-
+32 bit word ( 0 to 4,294,967,295 )
