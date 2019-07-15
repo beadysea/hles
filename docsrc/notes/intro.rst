@@ -28,7 +28,7 @@ decimal.
 
 ================  =====  =====
 Column weight ->  2's    1's  
-------------------------------
+----------------  ------------
 decimal value     bit 1  bit 0
 ================  =====  =====
 0                 0      0    
@@ -36,4 +36,21 @@ decimal value     bit 1  bit 0
 2                 1      0    
 3                 1      1    
 ================  =====  =====
+
+Extending this idea to 8 columns or 8 bits gives us the first real bit width used by
+early microprocessors. 8 bits is referred to as a **byte** and with this width a processor 
+can count and store binary numbers representing decimal 0 to 255. At first this may seem pretty 
+pointless however start bolting bytes together then you can represent any number provided you have
+enough bytes of memory to store it.
+
++-----------+----------+
+| High Byte | Low Byte |  A 16 bit word capable of storing numbers 0 to 65,535 
++-----------+----------+
+
+=========  ========  =========  ========
+High Word            Low Word
+-------------------  -------------------  32 bit word ( 0 to 4,294,967,295 )
+High Byte  Low Byte  High Byte  Low Byte
+=========  ========  =========  ========
+
 
