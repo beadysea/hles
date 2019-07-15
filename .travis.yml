@@ -1,5 +1,5 @@
-dist: xenial   # required for Python >= 3.7
 language: python
+dist: xenial   # required for Python >= 3.7
 
 python:
   - "3.7"
@@ -10,16 +10,16 @@ install:
 jobs:
   include:
     - stage: unittest
-	   script: echo "unittest"
+	  script: echo "unittest"
 	- stage: deploy docs
-	   script:
-	   - cd docsrc
-	   - make html
-	   - touch _build/html/.nojekyll
-	   - cd -
-	   deploy:
-	   provider: pages
-	   skip_cleanup: true
-	   local_dir: docsrc/_build/html
-	   github_token: $GITHUB_TOKEN 
-	   keep-history: false
+	  script:
+	  - cd docsrc
+	  - make html
+	  - touch _build/html/.nojekyll
+	  - cd -
+	  deploy:
+	    provider: pages
+	    skip_cleanup: true
+	    local_dir: docsrc/_build/html
+	    github_token: $GITHUB_TOKEN 
+	    keep-history: false
