@@ -7,15 +7,19 @@ python:
 install:
   - pip install -r requirements.txt
   - pip install -r docsrc/requirements.txt
-
-script:             # build sphinx document
-  - cd docsrc
-  - make html
-  - touch _build/html/.nojekyll
-  - cd -
-deploy:              # deploy to github page
-  provider: pages
-  skip_cleanup: true
-  local_dir: docsrc/_build/html
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  keep-history: false
+jobs:
+  include:
+    - stage: unittest
+	   script: echo "unittest"
+	- stage: deploy docs
+	   script:
+	   - cd docsrc
+	   - make html
+	   - touch _build/html/.nojekyll
+	   - cd -
+	   deploy:
+	   provider: pages
+	   skip_cleanup: true
+	   local_dir: docsrc/_build/html
+	   github_token: $GITHUB_TOKEN 
+	   keep-history: false
