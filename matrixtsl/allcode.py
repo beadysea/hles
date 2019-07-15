@@ -3,8 +3,9 @@
 This module consists of a an API class providing all avalaible methods for
 controlling a formula allcode car to the application programmer.
 
-Example use:
->>> car = allcode.API()
+Example use::
+    >>> car = allcode.API()
+
 """
 
 
