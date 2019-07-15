@@ -26,14 +26,14 @@ billions and trillions of them for today's world, but let's no get ahead of ours
 If we have two bits then we can start with the idea of counting using the same process we use in
 decimal.
 
-================  =====  =====  ===============================================================
+================  =====  =====  =========================
 Column weight ->  2's    1's
-================  =====  =====  ===============================================================
+================  =====  =====  =========================
 decimal value     bit 1  bit 0
-================  =====  =====  ===============================================================
+================  =====  =====  =========================
 0                 0      0
-1                 0      1      We can't count higher than 1 in binary
-2                 1      0      so we place a 0 in the units column and a 1 in the two's column
+1                 0      1      Can't count higher than 1
+2                 1      0      so two represented by 1 0
 3                 1      1
-=======           =====  =====  ===============================================================
+=======           =====  =====  ==========================
 
