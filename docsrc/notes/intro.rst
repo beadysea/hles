@@ -27,7 +27,7 @@ If we have two bits then we can start with the idea of counting using the same p
 decimal.
 
 ================  =====  =====
-Column weight ->  2's    1's  
+Column weight -   2s    1s  
 ================  =====  =====
 decimal value     bit 1  bit 0
 ================  =====  =====
