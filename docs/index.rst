@@ -6,8 +6,8 @@
 Welcome to high level engineering software
 ==========================================
 
-Course Notes
-############
+Course Text
+###########
 
 .. toctree::
    :maxdepth: 2
